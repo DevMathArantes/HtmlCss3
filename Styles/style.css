@@ -1,0 +1,149 @@
+/*
+- O comando CTRL + K + C comenta o código selecionado
+
+Links para tipos de border
+https://www.w3schools.com/css/css_border.asp
+https://www.alura.com.br/artigos/css-border-estilizando-bordas-elementos-css?_gl=1*16rrbm1*_ga*MTc2NjQ3MDQ4NS4xNzE2MjE1MTU2*_ga_1EPWSW3PCS*MTcxNzc3NjMzMC4zNC4xLjE3MTc3NzgxNDYuMC4wLjA.
+https://cursos.alura.com.br/extra/alura-mais/css-border-estilizando-com-bordas-seus-elementos-css-c1486
+
+Link com detalhes do padding
+https://www.w3schools.com/cssref/pr_padding.php
+
+Link sobre o :hover
+https://www.w3schools.com/cssref/sel_hover.php
+
+Link para tags semânticas
+https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics
+
+Link sobre as variáveis css
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties
+https://cursos.alura.com.br/extra/alura-mais/como-as-variaveis-css-transformam-meu-projeto--c1485
+
+Novos atributos
+
+Engrossar fonte (de 0 a 999)
+font-weight:...;
+
+Efeitos para quando o mouse passar em cima do elemento x
+x:hover{...}
+
+Efeitos para quando o mouse passar por um elemento x em y
+x:hover y{...}
+
+Váriavel global
+:root{...}
+Elas devem ser criadas com um "--" no início ("--variavel: valor;")
+
+Chamando uma variável x dentro de um atributo y
+y: var(x);
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root{
+    --Ciano: #22D4FD;
+    --CorFundo: black;
+    --Branco: white;
+    --cor-hover: #272727;
+    --fontKrona: "Krona One", sans-serif;
+    --fontMontserrat: "Montserrat", sans-serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: var(--Branco);
+    background-color: var(--CorFundo);
+}
+body main img{
+    width: 43%;
+    box-shadow: 10px -10px 1px var(--Ciano);
+}
+.destaqueTitulo{
+    color: var(--Ciano);
+}
+.destaque{
+    color: var(--Ciano);
+    font-size: 20px;
+    font-size: 24px;
+}
+.principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+.principalConteudo{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.apresentaçaoConteudoTitulo{
+    font-size: 36px;
+    font-family: var(--fontKrona);
+}
+.apresentaçaoConteudoParagrafo{
+    font-size: 24px;
+    font-family: var(--fontMontserrat);
+}
+.apresentaçaoLinks{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.apresentaçaoLinksSubtitulo{
+    font-family: var(--fontKrona);
+    font-weight: 400;
+    font-size: 24px;
+}
+.apresentaçaoLinksLink{
+    width: 378px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 21.5px 0px;
+    text-decoration: none;
+    color: var(--Branco);
+    border: 2px solid var(--Ciano);
+    font-family: var(--fontKrona);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.apresentaçaoLinksLink img{
+   width: 30px;
+   box-shadow: none;
+}
+.apresentaçaoLinksLink:hover{
+    background-color: var(--cor-hover)
+}
+.rodape{
+    color: var(--CorFundo);
+    background-color: var(--Ciano);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fontMontserrat);
+    font-size: 24px;
+    font-weight: 400;
+}
+.cabecalhoMenuLink{
+    font-family: var(--fontMontserrat);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--Ciano);
+    text-decoration: none;
+}
+.cabecalho{
+    padding: 2% 0% 0% 5%;
+}
+.cabecalhoMenu{
+    display: flex;
+    gap: 80px;
+}
